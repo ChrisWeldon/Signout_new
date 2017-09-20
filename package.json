@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ChrisWeldon/Signout_new/issues"
   },
-  "homepage": "https://github.com/ChrisWeldon/Signout_new#readme"
+  "homepage": "https://github.com/ChrisWeldon/Signout_new#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1"
+  }
 }

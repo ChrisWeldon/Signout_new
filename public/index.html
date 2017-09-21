@@ -9,9 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="index.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
-  
+
 </head>
 
 <body>
@@ -52,8 +53,7 @@
                 <button onclick="search(x)">X</button>
                 <button onclick="search(y)">Y</button>
                 <button onclick="search(z)">Z</button>
-                <h1>Buttons for each letter </h1>
-                <table class="table table-striped" id="directory_header">
+                <table class="table table-striped" id="directory">
                     <thead>
                         <tr>
                             <th>First</th>
@@ -62,29 +62,6 @@
                         </tr>
                     </thead>
                     <tbody id="directory_body">
-                        <tr>
-                            <td>First_Example</td>
-                            <td>Last_Example</td>
-                            <td>
-                                <div class="dropdown">
-                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sign Out
-                                    <span class="caret"></span></button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Sample Location 1</a></li>
-                                        <li><a href="#">Sample Location 2</a></li>
-                                        <li>
-                                            <div>
-                                                <a href="#">
-                                                    <div class="form-group">
-                                                        <input type="location" class="form-control" id="location">
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
                     </tbody>
                 </table>
             </div>

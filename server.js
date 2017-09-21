@@ -28,6 +28,10 @@ app.get("/studentList/:sort", function(req, res){
   }
   res.send(sendObj);
 });
+app.get("/studentList", function(req, res){
+
+  res.send(studentsId);
+});
 
 app.get("/sign/:studentId/:state/:loc", function(req, res){
   var student = req.params.studentId;

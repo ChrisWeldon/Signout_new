@@ -30,24 +30,39 @@ function displaySort(a){
 
 function refresh(user){
   //TODO make refresh just the single person
-  $("#" + user.id).empty()
+  $("#" + user.id).empty();
+  $("#log_body").empty();
   $("#" + user.id).append('<td>'+user.first+'</td><td>'+user.last+'</td><td>'+ dropdown(user.status, user.id) + '</td>');
+  $.getJSON("/signedOut", function(dat, stat){
+    console.log(dat);
+    for(var i in dat){
+      $("#log_body").append('<tr><td>'+dat[i].first+'</td><td>'+dat[i].last+'</td><td>'+dat[i].location+'</td><td>'+dat[i].timeout +'</td><td><button onclick="signIn(\''+dat[i].id+'\')">Sign In</button></td></tr>');
+    }
+  });
 }
 
 function search(ch){
   displaySort(ch);
 }
 
+$(document).keypress(function(e) {
+   if(e.which == 13) {
+     var focusId = $(':focus').attr("id").substring(15,$(':focus').attr("id").length);
+     signOut(focusId, $(':focus').val());
+
+   }
+});
+
+
 function dropdown(bool, id){
   if(bool || bool == "TRUE"){
-    return '<div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sign Out<span class="caret"></span></button><ul class="dropdown-menu"><li><a onclick="signOut(\''+id+'\','+ '\'mikes\''+ ')" >Mikes</a></li><li><a onclick="signOut(\''+id+'\','+ '\'manaus\''+ ')">Manaus</a></li><li><div><a ><div class="form-group"><input type="location" class="form-control" id="location"></div></a></div></li></ul></div>';
+    return '<div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sign Out<span class="caret"></span></button><ul class="dropdown-menu"><li><a onclick="signOut(\''+id+'\','+ '\'mikes\''+ ')" >Mikes</a></li><li><a onclick="signOut(\''+id+'\','+ '\'manaus\''+ ')">Manaus</a></li><li><div><a ><div class="form-group"><input type="text" class="form-control" id="location_input_'+id+'"></div></a></div></li></ul></div>';
   }else{
     return '<button onclick="signIn(\''+id+'\')">Sign In</button>'
   }
 }
 
 function signOut(id, loc){
-  console.log("signed out: "+ id + " to " + loc+" called")
   $.getJSON("/sign/"+id+"/out/"+loc, {}, function(dat, stat){
     refresh(dat);
   });

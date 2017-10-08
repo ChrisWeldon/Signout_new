@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,11 +6,12 @@
     <title>MSSM Sign-Out</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
-  
+
 </head>
 
 <body>
@@ -21,45 +21,68 @@
                 <div class="page-header" align="center">
                     <h1><img class="img-responsive" src="MSSM_logo.png" alt="MSSM_Logo" style="width:287px;height:147px;"></h1>
                     <h1>Sign In-Out</h1>
+                    <br>
                 </div>
             </div>
         </div>
-        <div class="row" id="body">
-            <div class="col-sm-6" id="leftcol">
-                <button onclick="search(a)">A</button>
-                <button onclick="search(b)">B</button>
-                <button onclick="search(c)">C</button>
-                <button onclick="search(d)">D</button>
-                <button onclick="search(e)">E</button>
-                <button onclick="search(f)">F</button>
-                <button onclick="search(g)">G</button>
-                <button onclick="search(h)">H</button>
-                <button onclick="search(i)">I</button>
-                <button onclick="search(j)">J</button>
-                <button onclick="search(k)">K</button>
-                <button onclick="search(l)">L</button>
-                <button onclick="search(m)">M</button>
-                <button onclick="search(n)">N</button>
-                <button onclick="search(o)">O</button>
-                <button onclick="search(p)">P</button>
-                <button onclick="search(q)">Q</button>
-                <button onclick="search(r)">R</button>
-                <button onclick="search(s)">S</button>
-                <button onclick="search(t)">T</button>
-                <button onclick="search(u)">U</button>
-                <button onclick="search(v)">V</button>
-                <button onclick="search(w)">W</button>
-                <button onclick="search(x)">X</button>
-                <button onclick="search(y)">Y</button>
-                <button onclick="search(z)">Z</button>
+        <div class="row" id="navigation">
+            <div class="col-sm-6" id="button_directory">
+                <br>
+                <div class="btn-group btn-group-justified">
+                    <a href="#" class="btn btn-primary">A</a>
+                    <a href="#" class="btn btn-primary">B</a>
+                    <a href="#" class="btn btn-primary">C</a>
+                    <a href="#" class="btn btn-primary">D</a>
+                    <a href="#" class="btn btn-primary">E</a>
+                    <a href="#" class="btn btn-primary">F</a>
+                    <a href="#" class="btn btn-primary">G</a>
+                    <a href="#" class="btn btn-primary">H</a>
+                    <a href="#" class="btn btn-primary">I</a>
+                    <a href="#" class="btn btn-primary">J</a>
+                    <a href="#" class="btn btn-primary">K</a>
+                    <a href="#" class="btn btn-primary">L</a>
+                    <a href="#" class="btn btn-primary">M</a>
+                </div>
+                <div class="btn-group btn-group-justified">
+                    <a href="#" class="btn btn-primary">N</a>
+                    <a href="#" class="btn btn-primary">O</a>
+                    <a href="#" class="btn btn-primary">P</a>
+                    <a href="#" class="btn btn-primary">Q</a>
+                    <a href="#" class="btn btn-primary">R</a>
+                    <a href="#" class="btn btn-primary">S</a>
+                    <a href="#" class="btn btn-primary">T</a>
+                    <a href="#" class="btn btn-primary">U</a>
+                    <a href="#" class="btn btn-primary">V</a>
+                    <a href="#" class="btn btn-primary">W</a>
+                    <a href="#" class="btn btn-primary">X</a>
+                    <a href="#" class="btn btn-primary">Y</a>
+                    <a href="#" class="btn btn-primary">Z</a>
+                </div>
+            </div>
+            <div class="col" id="button_log">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#">Signed Out</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Logs<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">1/1/17</a></li>
+                            <li><a href="#">1/2/17</a></li>
+                            <li><a href="#">1/3/17</a></li>
+                        </ul>
+                    </li>
+                </ul>
                 <h1>Buttons for each letter </h1>
+            </div>
+        </div>
+        <div class="row" id="body">
+            <div class="col-sm-6" id="leftCol">
+                <h1>Names:</h1>
                 <table class="table table-striped" id="directory_header">
-                    <thead>
-                        <tr>
-                            <th>First</th>
-                            <th>Last</th>
-                            <th>Location</th>
-                        </tr>
+                    <tr>
+                        <th>First</th>
+                        <th>Last</th>
+                        <th>Location</th>
+                    </tr>
                     </thead>
                     <tbody id="directory_body">
                         <tr>
@@ -88,7 +111,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-sm-6" id="rightcol">
+            <div class="col-sm-6" id="rightCol">
                 <h1>Student Log</h1>
                 <table class="table table-striped" id="log_header">
                     <thead>
@@ -115,4 +138,5 @@
         </div>
     </div>
 </body>
+
 </html>

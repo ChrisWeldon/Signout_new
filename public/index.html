@@ -16,51 +16,60 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <!--<div class="row" id="header">
-            <div class="col-sm-12">
-                <div class="page-header" align="center">
-                    <h1><img class="img-responsive" src="MSSM_logo.png" alt="MSSM_Logo" style="width:287px;height:147px;"></h1>
-                    <h1>Sign In-Out</h1>
-                    <br>
-                </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-left">
+                    <img src="MSSM_logo.png" width="162" height="55">
+                </a>
+                <a class="navbar-brand" href="#"> &nbsp; Sign In-Out</a>
             </div>
-        </div>-->
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" id="header">
+
+        </div>
         <div class="row" id="navigation">
-            <div class="col-sm-6" id="button_directory">
+            <div class="col-sm-6 text-left" id="button_directory">
                 <br>
-                <div class="btn-group ">
-                  <button type="button" class="btn btn-primary" onclick="search('a')">A</button>
-                  <button type="button" class="btn btn-primary" onclick="search('b')">B</button>
-                  <button type="button" class="btn btn-primary" onclick="search('c')">C</button>
-                  <button type="button" class="btn btn-primary" onclick="search('d')">D</button>
-                  <button type="button" class="btn btn-primary" onclick="search('e')">E</button>
-                  <button type="button" class="btn btn-primary" onclick="search('f')">F</button>
-                  <button type="button" class="btn btn-primary" onclick="search('g')">G</button>
-                  <button type="button" class="btn btn-primary" onclick="search('h')">H</button>
-                  <button type="button" class="btn btn-primary" onclick="search('i')">I</button>
-                  <button type="button" class="btn btn-primary" onclick="search('j')">J</button>
-                  <button type="button" class="btn btn-primary" onclick="search('k')">K</button>
-                  <button type="button" class="btn btn-primary" onclick="search('l')">L</button>
-                  <button type="button" class="btn btn-primary" onclick="search('m')">M</button>
-                  <button  type="button" class="btn btn-primary" onclick="search('n')">N</button>
-                  <button  type="button" class="btn btn-primary" onclick="search('o')">O</button>
-                  <button  type="button" class="btn btn-primary" onclick="search('p')">P</button>
-                  <button  type="button" class="btn btn-primary" onclick="search('q')">Q</button>
-                  <button  type="button" class="btn btn-primary" onclick="search('r')">R</button>
-                  <button  type="button" class="btn btn-primary" onclick="search('s')">S</button>
-                  <button  type="button" class="btn btn-primary" onclick="search('t')">T</button>
-                  <button  type="button" class="btn btn-primary" onclick="search('u')">U</button>
-                  <button  type="button" class="btn btn-primary" onclick="search('v')">V</button>
-                  <button  type="button" class="btn btn-primary" onclick="search('w')">W</button>
-                  <button  type="button" class="btn btn-primary" onclick="search('x')">X</button>
-                  <button  type="button" class="btn btn-primary" onclick="search('y')">Y</button>
-                  <button  type="button" class="btn btn-primary" onclick="search('z')">Z</button>
+                <div class="btn-group btn-group-lg btn-group-justified">
+                    <button type="button" class="btn btn-primary" onclick="search('a')">A</button>
+                    <button type="button" class="btn btn-primary" onclick="search('b')">B</button>
+                    <button type="button" class="btn btn-primary" onclick="search('c')">C</button>
+                    <button type="button" class="btn btn-primary" onclick="search('d')">D</button>
+                    <button type="button" class="btn btn-primary" onclick="search('e')">E</button>
+                    <button type="button" class="btn btn-primary" onclick="search('f')">F</button>
+                    <button type="button" class="btn btn-primary" onclick="search('g')">G</button>
+                    <button type="button" class="btn btn-primary" onclick="search('h')">H</button>
+                    <button type="button" class="btn btn-primary" onclick="search('i')">I</button>
+                    <button type="button" class="btn btn-primary" onclick="search('j')">J</button>
+                    <button type="button" class="btn btn-primary" onclick="search('k')">K</button>
+                    <button type="button" class="btn btn-primary" onclick="search('l')">L</button>
+                    <button type="button" class="btn btn-primary" onclick="search('m')">M</button>
+                </div>
+                <div class="btn-group btn-group-lg btn-group-justified">
+                    <button type="button" class="btn btn-primary" onclick="search('n')">N</button>
+                    <button type="button" class="btn btn-primary" onclick="search('o')">O</button>
+                    <button type="button" class="btn btn-primary" onclick="search('p')">P</button>
+                    <button type="button" class="btn btn-primary" onclick="search('q')">Q</button>
+                    <button type="button" class="btn btn-primary" onclick="search('r')">R</button>
+                    <button type="button" class="btn btn-primary" onclick="search('s')">S</button>
+                    <button type="button" class="btn btn-primary" onclick="search('t')">T</button>
+                    <button type="button" class="btn btn-primary" onclick="search('u')">U</button>
+                    <button type="button" class="btn btn-primary" onclick="search('v')">V</button>
+                    <button type="button" class="btn btn-primary" onclick="search('w')">W</button>
+                    <button type="button" class="btn btn-primary" onclick="search('x')">X</button>
+                    <button type="button" class="btn btn-primary" onclick="search('y')">Y</button>
+                    <button type="button" class="btn btn-primary" onclick="search('z')">Z</button>
                 </div>
             </div>
         </div>
         <div class="row" id="body">
             <div class="col-sm-6" id="leftCol">
+                <br>
+                <br>
                 <table class="table table-striped" id="directory_header">
                     <tr>
                         <th>First</th>
@@ -75,10 +84,15 @@
                             <td>
                                 <div class="dropdown">
                                     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sign Out
-                                    <span class="caret"></span></button>
+                                        <span class="caret"></span>
+                                    </button>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Sample Location 1</a></li>
-                                        <li><a href="#">Sample Location 2</a></li>
+                                        <li>
+                                            <a href="#">Sample Location 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Sample Location 2</a>
+                                        </li>
                                         <li>
                                             <div>
                                                 <a href="#">
@@ -96,53 +110,60 @@
                 </table>
             </div>
             <div class="col-sm-6" id="rightCol">
-              <div class="col" id="button_log">
-                  <ul class="nav nav-tabs">
-                      <li class="active"><a data-toggle="tab" href="#today">Signed Out</a></li>
-                      <li><a data-toggle="tab" href="#todayPerm">Today</a></li>
-                      <li class="dropdown">
-                          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Logs<span class="caret"></span></a>
-                          <ul class="dropdown-menu">
-                              <li><a data-toggle="tab" href="otherday">Today</a></li>
-                          </ul>
-                      </li>
-                  </ul>
+                <div class="col" id="button_log">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a data-toggle="tab" href="#today">Signed Out</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#todayPerm">Today</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Logs
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a data-toggle="tab" href="otherday">Today</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
 
-                  <div class="tab-content">
-                    <div id="today" class="tab-pane in active">
-                      <h1>Student Log</h1>
-                      <table class="table table-striped" id="log_header">
-                          <thead>
-                              <tr>
-                                  <th>First</th>
-                                  <th>Last</th>
-                                  <th>Location</th>
-                                  <th>Time Out</th>
-                                  <th>Time In</th>
-                              </tr>
-                          </thead>
-                          <tbody id="log_body">
-                          </tbody>
-                      </table>
+                    <div class="tab-content">
+                        <div id="today" class="tab-pane in active">
+                            <table class="table table-striped" id="log_header">
+                                <thead>
+                                    <tr>
+                                        <th>First</th>
+                                        <th>Last</th>
+                                        <th>Location</th>
+                                        <th>Time Out</th>
+                                        <th>Time In</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="log_body">
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div id="todayPerm" class="tab-pane">
+                            <table class="table table-striped" id="todaylog">
+                                <thead>
+                                    <tr>
+                                        <th>Student</th>
+                                        <th>Location</th>
+                                        <th>Time Out</th>
+                                        <th>Time In</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="todaylog_body">
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
-
-                    <div id="todayPerm" class="tab-pane">
-                      <table class="table table-striped" id="todaylog">
-                          <thead>
-                              <tr>
-                                  <th>Student</th>
-                                  <th>Location</th>
-                                  <th>Time Out</th>
-                                  <th>Time In</th>
-                              </tr>
-                          </thead>
-                          <tbody id="todaylog_body">
-                          </tbody>
-                      </table>
-                    </div>
-
-                  </div>
-              </div>
+                </div>
             </div>
         </div>
     </div>

@@ -58,7 +58,6 @@ app.get("/sign/:studentId/:state/:loc", function(req, res){
     studentsId[student].timeout = getTime();
   }else if(status == "in"){
     updateLog(studentsId[student]);
-    displayPermToday();
     studentsId[student].status = true;
     studentsId[student].location = "Dorm";
   }

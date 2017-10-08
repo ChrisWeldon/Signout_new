@@ -1,0 +1,8 @@
+#leftCol{
+  max-height: 90vh;
+  overflow-y:auto;
+}
+.tab-content{
+  max-height: 90vh;
+  overflow-y:auto;
+}

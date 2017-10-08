@@ -84,6 +84,7 @@ function signOut(id, loc){
 function signIn(id){
   $.getJSON("/sign/"+id+"/in/Dorm", {}, function(dat, stat){
     refresh(dat);
+    displayPermToday();
   });
   return false;
 }

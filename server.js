@@ -21,8 +21,7 @@ app.get("/studentList/:sort", function(req, res){
   var sort = req.params.sort;
   for (var key in students) {
     if (students.hasOwnProperty(key)) {
-      if(students[key].first.toLowerCase().indexOf(sort) > -1 && students[key].first.toLowerCase().indexOf(sort) == 0 ){
-        console.log(students[key].first);
+      if(students[key].last.toLowerCase().indexOf(sort) > -1 && students[key].last.toLowerCase().indexOf(sort) == 0 ){
         sendObj[students[key].id] = students[key];
       }
     }
@@ -58,12 +57,30 @@ app.get("/sign/:studentId/:state/:loc", function(req, res){
     studentsId[student].location = loc;
     studentsId[student].timeout = getTime();
   }else if(status == "in"){
+    updateLog(studentsId[student]);
+    displayPermToday();
     studentsId[student].status = true;
     studentsId[student].location = "Dorm";
-    updateLog(studentsId[student]);
   }
 
   res.send(studentsId[req.params.studentId]);
+});
+
+app.get("/get-today-log", function(req, res){
+  todaypermlog = csvjson.toObject(fs.readFileSync(path.join(__dirname, todayLog), { encoding : 'utf8'}), {
+    delimiter : ',', // optional
+    quote     : '"' // optional
+  });
+  console.log(todaypermlog)
+  res.send(todaypermlog);
+});
+
+app.get("/getlog/:date", function(req, res){
+  var datepermlog = csvjson.toObject(fs.readFileSync(path.join(__dirname, "logs/" + req.params.date + ".csv"), { encoding : 'utf8'}), {
+    delimiter : ',', // optional
+    quote     : '"' // optional
+  });
+  res.send(datepermlog);
 });
 
 function updateLog(student){
@@ -141,9 +158,10 @@ function updateLocalSave(){
 
 function checkDate(){
 
-  if (fs.existsSync(path)) {
-    var header = "student, location, timeout, timein"
-    fs.writeFile("logs/" + getDate() +".csv", students, 'utf8', function (err) {
+  if (!fs.existsSync("logs/" + getDate() +".csv")) {
+    console.log("path doesn't exist")
+    var header = "student, location, timeout, timein \r\n"
+    fs.writeFile("logs/" + getDate() +".csv", header, 'utf8', function (err) {
        if (err) {
            return console.log(err);
        }
@@ -165,6 +183,8 @@ function makeIds(){  //this should be in the csv file but I am making it procedu
   }
   console.log(studentsId);
 }
+
+
 
 app.use(express.static('public'));
 

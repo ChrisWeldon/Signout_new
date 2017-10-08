@@ -2,6 +2,7 @@ $(document).ready(function(){
   console.log("doc ready");
   signOut("id", "loc");
   displayAll();
+  displayPermToday();
 });
 
 function displayAll(){
@@ -11,6 +12,17 @@ function displayAll(){
     for(var key in dat){
       if(dat.hasOwnProperty(key)){
         $("#directory_body").append('<tr id="'+dat[key].id+'"><td>'+dat[key].first+'</td><td>'+dat[key].last+'</td><td>'+ dropdown(dat[key].status, dat[key].id) + '</td></tr>');
+      }
+    }
+  });
+}
+
+function displayPermToday(){
+  $.getJSON("/get-today-log", {}, function(dat, stat){
+    $("#todaylog_body").empty();
+    for(var key in dat){
+      if(dat.hasOwnProperty(key)){
+        $("#todaylog_body").append('<tr id="'+dat[key].student+'"><td>'+dat[key].student+'</td><td>'+ dat[key].location + '</td><td>'+ dat[key].timeout + '</td><td>'+ dat[key].timein + '</td></tr>');
       }
     }
   });
@@ -56,7 +68,7 @@ $(document).keypress(function(e) {
 
 function dropdown(bool, id){
   if(bool || bool == "TRUE"){
-    return '<div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sign Out<span class="caret"></span></button><ul class="dropdown-menu"><li><a onclick="signOut(\''+id+'\','+ '\'mikes\''+ ')" >Mikes</a></li><li><a onclick="signOut(\''+id+'\','+ '\'manaus\''+ ')">Manaus</a></li><li><div><a ><div class="form-group"><input type="text" class="form-control" id="location_input_'+id+'"></div></a></div></li></ul></div>';
+    return '<div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sign Out<span class="caret"></span></button><ul class="dropdown-menu"><li><a onclick="signOut(\''+id+'\','+ '\'mikes\''+ ')" >Mikes</a></li><li><a onclick="signOut(\''+id+'\','+ '\'manaus\''+ ')">Manaus</a></li><li><a onclick="signOut(\''+id+'\','+ '\'Albears\''+ ')" >Albears</a></li><li><div><a ><div class="form-group"><input type="text" class="form-control" id="location_input_'+id+'"></div></a></div></li></ul></div>';
   }else{
     return '<button onclick="signIn(\''+id+'\')">Sign In</button>'
   }

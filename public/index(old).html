@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>MSSM Sign-Out</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row" id="header">
+            <div class="col-sm-12">
+                <div class="page-header" align="center">
+                    <h1><img class="img-responsive" src="MSSM_logo.png" alt="MSSM_Logo" style="width:287px;height:147px;"></h1>
+                    <h1>Sign In-Out</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="body">
+            <div class="col-sm-6" id="leftcol">
+                <button onclick="search('a')">A</button>
+                <button onclick="search('b')">B</button>
+                <button onclick="search('c')">C</button>
+                <button onclick="search('d')">D</button>
+                <button onclick="search('e')">E</button>
+                <button onclick="search('f')">F</button>
+                <button onclick="search('g')">G</button>
+                <button onclick="search('h')">H</button>
+                <button onclick="search('i')">I</button>
+                <button onclick="search('j')">J</button>
+                <button onclick="search('k')">K</button>
+                <button onclick="search('l')">L</button>
+                <button onclick="search('m')">M</button>
+                <button onclick="search('n')">N</button>
+                <button onclick="search('o')">O</button>
+                <button onclick="search('p')">P</button>
+                <button onclick="search('q')">Q</button>
+                <button onclick="search('r')">R</button>
+                <button onclick="search('s')">S</button>
+                <button onclick="search('t')">T</button>
+                <button onclick="search('u')">U</button>
+                <button onclick="search('v')">V</button>
+                <button onclick="search('w')">W</button>
+                <button onclick="search('x')">X</button>
+                <button onclick="search('y')">Y</button>
+                <button onclick="search('z')">Z</button>
+                <table class="table table-striped" id="directory">
+                    <thead>
+                        <tr>
+                            <th>First</th>
+                            <th>Last</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody id="directory_body">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-6" id="rightcol">
+                <h1>Student Log</h1>
+                <table class="table table-striped" id="log_header">
+                    <thead>
+                        <tr>
+                            <th>First</th>
+                            <th>Last</th>
+                            <th>Location</th>
+                            <th>Time Out</th>
+                            <th>Time In</th>
+                        </tr>
+                    </thead>
+                    <tbody id="log_body">
+                        <tr>
+                            <td>First_Example</td>
+                            <td>Last_Example</td>
+                            <td>Location_Example</td>
+                            <td>12:00 AM</td>
+                            <td>12:00 AM</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

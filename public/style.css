@@ -2,12 +2,14 @@
   max-height: 90vh;
   overflow-y:auto;
 }
+
+  /* #rightCol{
+    max-height: 90vh;
+    overflow-y:auto;
+  } */
+
 .tab-content{
   max-height: 90vh;
   overflow-y:auto;
 }
 
-#logo{
-  width: 100;
-  height: 100;
-}

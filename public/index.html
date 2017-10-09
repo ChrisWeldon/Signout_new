@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--
+    To Do:
+        Limit table sizes so scrolling is self contained
+        Buttons as tabs
+        Button styling for sign in buttons
+        Clear background logo
+        Center align text in buttons
+
+    Ideas:
+        leftCol buttons as tabs?
+
+-->
 
 <head>
     <title>MSSM Sign-Out</title>
@@ -20,7 +32,7 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <a href="#" class="navbar-left">
-                    <img src="MSSM_logo.png" width="162" height="55">
+                    <img src="MSSM_logo.png" max height="55" width="auto">
                 </a>
                 <a class="navbar-brand" href="#"> &nbsp; Sign In-Out</a>
             </div>
@@ -28,9 +40,6 @@
     </nav>
 
     <div class="container-fluid">
-        <div class="row" id="header">
-
-        </div>
         <div class="row" id="navigation">
             <div class="col-sm-6 text-left" id="button_directory">
                 <br>
@@ -70,7 +79,7 @@
             <div class="col-sm-6" id="leftCol">
                 <br>
                 <br>
-                <table class="table table-striped" id="directory_header">
+                <table class="table table-hover" id="directory">
                     <tr>
                         <th>First</th>
                         <th>Last</th>
@@ -110,7 +119,7 @@
                 </table>
             </div>
             <div class="col-sm-6" id="rightCol">
-                <div class="col" id="button_log">
+                <div class="col" id="menu_log">
                     <ul class="nav nav-tabs">
                         <li class="active">
                             <a data-toggle="tab" href="#today">Signed Out</a>
@@ -132,7 +141,7 @@
 
                     <div class="tab-content">
                         <div id="today" class="tab-pane in active">
-                            <table class="table table-striped" id="log_header">
+                            <table class="table table-hover" id="log_header">
                                 <thead>
                                     <tr>
                                         <th>First</th>
@@ -148,7 +157,7 @@
                         </div>
 
                         <div id="todayPerm" class="tab-pane">
-                            <table class="table table-striped" id="todaylog">
+                            <table class="table table-hover" id="todaylog">
                                 <thead>
                                     <tr>
                                         <th>Student</th>
